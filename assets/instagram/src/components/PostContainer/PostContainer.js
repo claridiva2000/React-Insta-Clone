@@ -1,23 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import "./postcontainer.css"
-class PostContainer extends Component {
-  render() {
+
+function PostContainer(props) {
     return (
-      <div className="PostContainer">
-        <div className="screenName">
-            <img src="https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg"></img> <p>usernamehere</p>
+      <>
+      {props.posts.map(posts=>(
+       <div className="PostContainer">
+       <div className="screenName">
+          <img src={posts.thumbnailUrl}></img> <p>{posts.username}</p>
         </div>
-            <div className="postImg">
-            <img src="https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg"></img>
+        <div className="postImg">
+           <img src={posts.imageUrl}></img>
+         </div>
+
+          
+         <div className="CommentSection">
+        <i class="far fa-heart"></i><i class="far fa-comment"></i>
+        <p>{posts.likes} likes</p>
+        </div>
+        
+        <div className="comments">
+        {posts.comments.map(e=><p><span className="person">{e.username}</span> : {e.text}</p>)} 
         </div>
 
+        <div className="timestamp">
+            2 hours ago
       </div>
       
 
-      
+        </div>
+      ))}
+      </>      
     );
   }
-}
+
+
+  
+
+  
+
+  
+    
 
 export default PostContainer;

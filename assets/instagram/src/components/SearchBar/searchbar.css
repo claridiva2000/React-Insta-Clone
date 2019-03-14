@@ -9,7 +9,7 @@ html{
   /* border: red 1px solid; */
   padding: 5px;
   height: 40px;
-  border-bottom: gray 2px solid;
+  border-bottom: lightgray 1px solid;
 }
 
 .SearchBar div {
@@ -34,7 +34,7 @@ input{
   font-size: 1.3rem;
   width: 200px;
   height: 20px;
-  border: gray 1px solid;
+  border: lightgray 1px solid;
   padding: 4px;
 }
 
@@ -44,7 +44,7 @@ i{
 }
 .fa-instagram{
   font-size: 2.6rem;
-  border-right: lightgray 2px solid;
+  border-right: lightgray 1.5px solid;
   padding-right: 15px; 
 }
 
@@ -53,4 +53,5 @@ i{
   position: relative;
   left: 30px;
   bottom: 3px;
+  color: lightgray;
 }
