@@ -41,11 +41,11 @@ render() {
   return(
     <div>
       <form onSubmit={this.formSubmitHandler}>
-        <input name="screenName" placeholder="Screen Name"></input>
-        <textarea name="post" placeholder="Leave a Comment...">
+        <input name="screenName" value={this.state.screenName} onChange={this.inputChangeHandler} placeholder="Screen Name"></input>
+        <textarea name="post" value={this.state.post} onChange={this.inputChangeHandler} placeholder="Leave a Comment...">
 
         </textarea>
-        <button type="submit">Post!</button>
+        <button type="submit" >Post!</button>
       </form>
 
       <div className="postlist">
