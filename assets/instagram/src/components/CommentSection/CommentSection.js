@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import Posts from "./Posts";
+import React, { Component } from "react";
 
+import Posts from "./CommentSection/Posts"
 import "./commentsection.css"
 
 const comments = [];

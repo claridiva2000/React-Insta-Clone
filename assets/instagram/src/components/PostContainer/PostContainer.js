@@ -28,9 +28,7 @@ function PostContainer(props) {
             2 hours ago
       </div>
       
-      {/* <form>
-      <textarea placeholder="Add a comment..."></textarea>
-      </form> */}
+   
 
         </div>
       ))}
