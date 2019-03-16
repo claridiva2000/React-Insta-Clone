@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CommentSection from "./CommentSection/CommentSection"
 import "./postcontainer.css"
 
 function PostContainer(props) {
@@ -27,8 +28,7 @@ function PostContainer(props) {
         <div className="timestamp">
             2 hours ago
       </div>
-      
-   
+      <CommentSection />
 
         </div>
       ))}
