@@ -1,91 +1,39 @@
-import React from "react";
+import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
+// import PropTypes from 'prop-types'
 
-import "../PostContainer/postcontainer.css"
+class PostContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  
+ 
 
 
-import CommentSection from "../CommentSection/CommentSection"
-const PostContainer = props => {
-  return (
+  render() {
+    return (
+      <div>
         <div>
-            {props.posts.map(p => {
-              return (
-              <div className="post-container">
-              <div className="headerbox"><img src= {p.thumbnailUrl} alt="thumbnail"/> <p>{p.username }</p></div>
-              <div className="imgbox"><img src={p.imageUrl} alt="pic"/></div>
-                <CommentSection comments={p.comments}/>
-              </div>
-              )}
-          )}
+          <img src={this.props.data.thumbnailUrl} alt="thmb" />
+          {this.props.data.username}
         </div>
-  );
-
+        <img src={this.props.data.imageUrl} alt="url" />
+        <CommentSection chats={this.props.data.comments}/>
+        <form>
+          <textarea placeholder='leave a comment...'></textarea>
+        <button>Post!</button>
+        </form>
+        
+        <div>
+          <i className="fas fa-heart" onClick={()=>this.state.counter + 1}/>
+          {this.props.data.likes}
+        </div>
+        <div>{this.props.data.timestamp}</div>
+      </div>
+    );
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// const PostContainer = props => {
-// return(
-//   <div className="posts-container">
-//     {props.posts.map(p => <News key={p.imageUrl} post={p} /> )}
-//   </div>
-//   );
-// };
-
 export default PostContainer;
-
-
-
-// import React from 'react';
-
-
-// import "./postcontainer.css"
-
-// function PostContainer(props) {
-//     return (
-//       <>
-//       {props.posts.map(posts=>(
-//        <div className="PostContainer">
-//        <div className="screenName">
-//           <img src={posts.thumbnailUrl}></img> <p>{posts.username}</p>
-//         </div>
-//         <div className="postImg">
-//            <img src={posts.imageUrl}></img>
-//          </div>
-
-          
-//          <div className="CommentSection">
-//         <i class="far fa-heart"></i><i class="far fa-comment"></i>
-//         <p>{posts.likes} likes</p>
-//         </div>
-        
-//         <div className="comments">
-//         {posts.comments.map(e=><p><span className="person">{e.username}</span> : {e.text}</p>)} 
-//         </div>
-
-//         <div className="timestamp">
-//             2 hours ago
-//       </div>
-
-//         </div>
-//       ))}
-//       </>      
-//     );
-//   }
-
-
-  
-
-  
-
-  
-    
-
