@@ -1,0 +1,10 @@
+html{
+  font-size: 62.5%;
+}
+
+.App{
+  background: white;
+  border: gray 3px solid;
+  border-radius: 15px;
+  padding: 8px;
+}
